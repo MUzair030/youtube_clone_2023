@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {ChannelDetailsPage, Home, Navbar, SearchPage, VideoPage} from "./components";
+import {Box} from "@mui/material";
+import baseStyles from "./index.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+    <BrowserRouter>
+        <Box className="baseStyles" sx={{ backgroundColor: "black", padding:'0', margin:"0",  height:"100vh" }}>
+            <Navbar />
+            <Routes>7
+                <Route path="/" exact element={<Home />} />
+                <Route path="/video/:id" element={<VideoPage />} />
+                <Route path="/channel/:id" element={<ChannelDetailsPage />} />
+                <Route path="/search/:keywords" element={<SearchPage />} />
+            </Routes>
+        </Box>
+    </BrowserRouter>
+);
 
 export default App;
