@@ -9,7 +9,7 @@ function Sidebar(props){
             <Stack
                 direction="row"
                 sx={{ flexDirection: {md:"column"}, overflow:"auto", maxHeight:"90vh", position: "sticky",
-                    top: "0px", float:"left", backgroundColor:"black" , padding:"10px", width:"auto", minWidth:"12vw", margin:"0 10px 0"}}>
+                    top: "0px", float:"left", backgroundColor:"black" , padding:"10px", width:"auto", minWidth:"180px", margin:"0 10px 0"}}>
                 {
                     categories.map((category)=> (
                             <button

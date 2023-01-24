@@ -10,10 +10,9 @@ function VideosFeed(props){
             direction="column"
             flexWrap="wrap"
             gap={2}
-            sx={{ flexDirection: "row", justifyContent: "left", width:"82vw"}}>
+            sx={{ flexDirection: {md:"row", sx: "column"}, justifyContent: "left", width:"82vw"}}>
             {videos.map((item, idx)=>
                     <Box key={idx}>
-                        <VideoCard video={item} />
                         { item.id.videoId && <VideoCard video={item}/> }
                     </Box>
                 )
