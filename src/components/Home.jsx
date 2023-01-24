@@ -10,7 +10,6 @@ function Home() {
 
     const fetchFeedData=async () =>{
     return await fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-
     }
 
 

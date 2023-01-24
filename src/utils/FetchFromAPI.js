@@ -27,5 +27,35 @@ export const fetchFromAPI =  (url) => {
     }).catch(function (error) {
         console.error(error);
     });
+}
 
+export const fetchSuggestedVideosAPI =  (id) => {
+    options.params.relatedToVideoId = id;
+    options.params.part= 'id,snippet';
+    options.params.type= 'video';
+    return axios.get(`${BASE_URL}/search`, options).then(function (response) {
+        return response.data;
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
+
+export const fetchVideoDetailsAPI =  (id) => {
+    options.params.part= 'contentDetails,snippet,statistics'
+    options.params.id= id;
+    return axios.get(`${BASE_URL}/videos`, options).then(function (response) {
+        return response.data;
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
+
+export const fetchChannelDetailsAPI =  (id) => {
+    options.params.part= 'snippet,statistics'
+    options.params.id= id;
+    return axios.get(`${BASE_URL}/channels`, options).then(function (response) {
+        return response.data;
+    }).catch(function (error) {
+        console.error(error);
+    });
 }

@@ -16,7 +16,8 @@ const Navbar = () => {
         direction="row"
         alignItems="center"
         p={2}
-        sx = {{background:"black", justifyContent:"space-between", padding:"10px", position: "sticky", top: "0"}}>
+        sx = {{background:"black", justifyContent:"space-between", padding:"10px", overflow: "hidden", width:"100%", height:"50px",
+            position: "sticky", top: "0vh", float:"top"}}>
             <div
                 style={{display:"flex", alignItems:"center", flexBasis:"20%" }}>
                 <IconButton type='submit' sx={{ p: '10px', color: 'red' }} aria-label='menu'>

@@ -1,23 +1,24 @@
 import React from "react";
 import {Box, Typography, Card, CardContent, CardMedia} from "@mui/material";
 import {CheckCircle} from "@mui/icons-material";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function VideoCard(props){
     const {video} = props;
-    // console.log("video :::: ", video)
-    //
-    // // const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
-    // // const demoChannelUrl = '/channel/UCmXmlB4-HJytD7wek0Uo97A';
-    // // const demoVideoUrl = '/video/GDa8kZLNhJ4';
-    // // const demoChannelTitle = 'JavaScript Mastery';
-    // // const demoVideoTitle = 'Build and Deploy 5 JavaScript & React API Projects in 10 Hours - Full Course | RapidAPI';
-    // // const demoProfilePicture = 'http://dergipark.org.tr/assets/app/images/buddy_sample.png'
-    // //
+    const navigate = useNavigate();
+
+    const handleNavigate=(e)=>{
+        e.preventDefault();
+        if (video) {
+            navigate(`/video/${video.id.videoId}`);
+        }
+    };
 
     return (
 
-        <Card sx={{
+        <Card
+            onClick={handleNavigate}
+            sx={{
             height:"300px",
             width: {md: "300px", sx:"100%"},
             border: "none",
