@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.category-btn:hover {
+    background:#222222 !important;
+    /*background-color: #FC1503 !important;*/
+    color: white !important;
+}
+
+.category-btn:hover span{
+    color: white !important;
+}
