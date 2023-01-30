@@ -35,7 +35,8 @@ function Sidebar(props){
                                 <div
                                     style={{display:"flex",
                                         alignItems:"center",
-                                        justifyContent:"left"}}>
+                                        justifyContent:"left",
+                                        cursor: "pointer"}}>
                                     <span>{category.icon}</span>
                                     <span style={{ marginLeft:"20px"}}>{category.name}</span>
                                 </div>
